@@ -128,20 +128,24 @@ Permitir exclusão controlada
 
 Atualizar a planilha automaticamente
 
+
 **📂 Arquivo**
+
 automacao.py
+
 🛠 Tecnologias Utilizadas
 
-Python
+• Python
 
-Pandas
+• Pandas
 
-OpenPyXL
+• OpenPyXL
 
-Excel (.xlsx)
+• Excel (.xlsx)
 
 **🔎 Funcionalidades Implementadas**
 📥 Leitura da Planilha
+
 def carregar_dados():
     return pd.read_excel(CAMINHO)
 
@@ -150,30 +154,32 @@ Carrega automaticamente todos os registros da planilha.
 Converte em DataFrame para manipulação estruturada.
 
 **⚠️ Validação de Dados**
+
 Verificação de Equipamentos sem Tombamento
 def verificar_sem_tombamento(df):
 
 Identifica registros com:
 
-Tombamento vazio
+• Tombamento vazio
 
-Null
+• Null
 
-"nan"
+• "nan"
 
-Espaços em branco
+• Espaços em branco
 
 **🚫 Prevenção de Duplicidade**
 
 Valida:
 
-Tombamento duplicado
+•Tombamento duplicado
 
-Número de série duplicado
+•Número de série duplicado
 
-Evita inconsistências antes da gravação no Excel.
+•Evita inconsistências antes da gravação no Excel.
 
 **📊 Geração de Relatórios Automatizados**
+
 def gerar_relatorio(df):
 
 Cria automaticamente um arquivo:
@@ -182,19 +188,20 @@ Relatorio_Equipamentos.xlsx
 
 Com abas:
 
-Resumo Geral
+• Resumo Geral
 
-Equipamentos sem tombamento
+• Equipamentos sem tombamento
 
-Total por tipo
+• Total por tipo
 
-Total por setor
+• Total por setor
 
-Status de locação
+• Status de locação
 
 Tudo gerado programaticamente.
 
 **➕ Cadastro via Terminal**
+
 def cadastrar_equipamento(df):
 
 Permite:
@@ -208,21 +215,22 @@ Salvar diretamente na planilha
 Atualizar arquivo Excel automaticamente
 
 **🗑 Exclusão Controlada**
+
 def excluir_equipamento(df):
 
 Fluxo:
 
-Solicita tombamento
+• Solicita tombamento
 
-Verifica existência
+• Verifica existência
 
-Mostra dados encontrados
+•Mostra dados encontrados
 
-Solicita confirmação
+• Solicita confirmação
 
-Remove da planilha
+• Remove da planilha
 
-Atualiza Excel
+• Atualiza Excel
 
 **🧠 Estrutura do Sistema (Modo Terminal)**
 ===== SISTEMA DE CONTROLE DE EQUIPAMENTOS =====
@@ -239,17 +247,17 @@ Interface totalmente via CLI (Command Line Interface).
 
 Essa etapa foi essencial porque:
 
-Validou regras de negócio
+• Validou regras de negócio
 
-Criou estrutura de dados consistente
+• Criou estrutura de dados consistente
 
-Definiu campos obrigatórios
+• Definiu campos obrigatórios
 
-Estruturou lógica de movimentação
+• Estruturou lógica de movimentação
 
-Serviu de base para migração para banco SQLite
+• Serviu de base para migração para banco SQLite
 
-Facilitou transição para sistema web
+• Facilitou transição para sistema web
 
 **🔄 Evolução do Projeto**
 Planilha manual
@@ -265,17 +273,17 @@ Sistema Web Flask
 
 Esse módulo demonstrou:
 
-Manipulação de dados com Pandas
+• Manipulação de dados com Pandas
 
-Tratamento de inconsistências
+• Tratamento de inconsistências
 
-Escrita estruturada em Excel
+• Escrita estruturada em Excel
 
-Organização de código procedural
+• Organização de código procedural
 
-Implementação de regras de negócio
+• Implementação de regras de negócio
 
-Primeira etapa de transformação digital do processo
+• Primeira etapa de transformação digital do processo
 
 **👨‍💻 Autor**
 
