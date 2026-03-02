@@ -61,27 +61,6 @@ DataTables
 
 DataTables Buttons
 
-📂 Estrutura do Projeto
-controle-equipamentos/
-│
-├── app.py
-├── database.db
-│
-├── routes/
-│   └── equipamentos.py
-│
-├── templates/
-│   ├── home.html
-│   ├── equipamentos.html
-│   ├── cadastrar.html
-│   ├── editar.html
-│   ├── movimentar.html
-│   └── historico.html
-│
-├── static/
-│   ├── style.css
-│   └── datatable-config.js
-
 
 
 O sistema utiliza SQLite3 com as seguintes tabelas:
