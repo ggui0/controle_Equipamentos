@@ -233,6 +233,8 @@ Fluxo:
 • Atualiza Excel
 
 **🧠 Estrutura do Sistema (Modo Terminal)**
+
+
 ===== SISTEMA DE CONTROLE DE EQUIPAMENTOS =====
 
 1 - Gerar Relatório
