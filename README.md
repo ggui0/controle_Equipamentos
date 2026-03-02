@@ -146,8 +146,10 @@ automacao.py
 **🔎 Funcionalidades Implementadas**
 📥 Leitura da Planilha
 
+```python
 def carregar_dados():
     return pd.read_excel(CAMINHO)
+```
 
 Carrega automaticamente todos os registros da planilha.
 
