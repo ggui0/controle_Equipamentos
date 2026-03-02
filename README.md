@@ -1,25 +1,25 @@
 # controle_Equipamentos
 
-🖥️ Sistema Web de Controle de Equipamentos
+**🖥️ Sistema Web de Controle de Equipamentos**
 
 
 Sistema web desenvolvido para gerenciamento de equipamentos de TI, permitindo cadastro, movimentação, histórico e exportação de dados de forma organizada e escalável.
 
 O projeto evoluiu de uma planilha Excel tradicional para uma aplicação web completa utilizando Flask.
 
-📌 Sobre o Projeto
+**📌 Sobre o Projeto**
 
-Este sistema foi criado para substituir o controle manual via planilhas por uma aplicação web com:
+• Este sistema foi criado para substituir o controle manual via planilhas por uma aplicação web com:
 
-Interface dinâmica
+• Interface dinâmica
 
-Banco de dados estruturado
+• Banco de dados estruturado
 
-Histórico de movimentações
+• Histórico de movimentações
 
-Exportação de relatórios
+• Exportação de relatórios
 
-Filtros avançados estilo Excel
+**Filtros avançados estilo Excel**
 
 🚀 Funcionalidades
 
