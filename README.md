@@ -108,6 +108,8 @@ Arquitetura modular com Blueprints
 Desenvolver uma aplicação escalável e profissional para controle de ativos de TI, utilizando boas práticas de organização, separação de responsabilidades e estrutura modular.
 
 
+
+
 **🧮 Módulo de Automação via Planilha (Versão Inicial do Sistema)**
 
 Antes da versão web, o projeto começou como um sistema de automação em Python para manipulação direta da planilha Excel.
@@ -158,7 +160,11 @@ Converte em DataFrame para manipulação estruturada.
 **⚠️ Validação de Dados**
 
 Verificação de Equipamentos sem Tombamento
+
+```python
 def verificar_sem_tombamento(df):
+
+```
 
 Identifica registros com:
 
@@ -182,11 +188,17 @@ Valida:
 
 **📊 Geração de Relatórios Automatizados**
 
+```python
 def gerar_relatorio(df):
+
+```
 
 Cria automaticamente um arquivo:
 
+```
 Relatorio_Equipamentos.xlsx
+
+```
 
 Com abas:
 
@@ -218,7 +230,10 @@ Atualizar arquivo Excel automaticamente
 
 **🗑 Exclusão Controlada**
 
+```python
 def excluir_equipamento(df):
+
+```
 
 Fluxo:
 
