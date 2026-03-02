@@ -34,7 +34,8 @@ Filtros avançados estilo Excel
 ✔ Exportação para Excel, PDF e impressão
 ✔ Organização modular com Flask Blueprints
 
-🛠 Tecnologias Utilizadas
+**🛠 Tecnologias Utilizadas**
+
 🔹 Backend
 
 • Python 3.14
