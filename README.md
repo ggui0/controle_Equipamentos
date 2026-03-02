@@ -108,6 +108,175 @@ Arquitetura modular com Blueprints
 Desenvolver uma aplicação escalável e profissional para controle de ativos de TI, utilizando boas práticas de organização, separação de responsabilidades e estrutura modular.
 
 
+**🧮 Módulo de Automação via Planilha (Versão Inicial do Sistema)**
+
+Antes da versão web, o projeto começou como um sistema de automação em Python para manipulação direta da planilha Excel.
+
+Esse módulo foi responsável por:
+
+Ler dados da planilha .xlsx
+
+Validar inconsistências
+
+Evitar duplicidade de tombamento
+
+Gerar relatórios automáticos
+
+Permitir cadastro via terminal
+
+Permitir exclusão controlada
+
+Atualizar a planilha automaticamente
+
+**📂 Arquivo**
+automacao.py
+🛠 Tecnologias Utilizadas
+
+Python
+
+Pandas
+
+OpenPyXL
+
+Excel (.xlsx)
+
+**🔎 Funcionalidades Implementadas**
+📥 Leitura da Planilha
+def carregar_dados():
+    return pd.read_excel(CAMINHO)
+
+Carrega automaticamente todos os registros da planilha.
+
+Converte em DataFrame para manipulação estruturada.
+
+**⚠️ Validação de Dados**
+Verificação de Equipamentos sem Tombamento
+def verificar_sem_tombamento(df):
+
+Identifica registros com:
+
+Tombamento vazio
+
+Null
+
+"nan"
+
+Espaços em branco
+
+**🚫 Prevenção de Duplicidade**
+
+Valida:
+
+Tombamento duplicado
+
+Número de série duplicado
+
+Evita inconsistências antes da gravação no Excel.
+
+**📊 Geração de Relatórios Automatizados**
+def gerar_relatorio(df):
+
+Cria automaticamente um arquivo:
+
+Relatorio_Equipamentos.xlsx
+
+Com abas:
+
+Resumo Geral
+
+Equipamentos sem tombamento
+
+Total por tipo
+
+Total por setor
+
+Status de locação
+
+Tudo gerado programaticamente.
+
+**➕ Cadastro via Terminal**
+def cadastrar_equipamento(df):
+
+Permite:
+
+Inserir novo equipamento
+
+Validar duplicidade
+
+Salvar diretamente na planilha
+
+Atualizar arquivo Excel automaticamente
+
+**🗑 Exclusão Controlada**
+def excluir_equipamento(df):
+
+Fluxo:
+
+Solicita tombamento
+
+Verifica existência
+
+Mostra dados encontrados
+
+Solicita confirmação
+
+Remove da planilha
+
+Atualiza Excel
+
+**🧠 Estrutura do Sistema (Modo Terminal)**
+===== SISTEMA DE CONTROLE DE EQUIPAMENTOS =====
+
+1 - Gerar Relatório
+2 - Cadastrar Equipamento
+3 - Verificar Equipamentos Sem Tombamento
+4 - Excluir Equipamento
+0 - Sair
+
+Interface totalmente via CLI (Command Line Interface).
+
+**📈 Importância no Projeto**
+
+Essa etapa foi essencial porque:
+
+Validou regras de negócio
+
+Criou estrutura de dados consistente
+
+Definiu campos obrigatórios
+
+Estruturou lógica de movimentação
+
+Serviu de base para migração para banco SQLite
+
+Facilitou transição para sistema web
+
+**🔄 Evolução do Projeto**
+Planilha manual
+      ↓
+Automação via Python (Terminal)
+      ↓
+Validação e relatórios automatizados
+      ↓
+Migração para SQLite
+      ↓
+Sistema Web Flask
+💡 Impacto Técnico
+
+Esse módulo demonstrou:
+
+Manipulação de dados com Pandas
+
+Tratamento de inconsistências
+
+Escrita estruturada em Excel
+
+Organização de código procedural
+
+Implementação de regras de negócio
+
+Primeira etapa de transformação digital do processo
+
 **👨‍💻 Autor**
 
 Desenvolvido por Guilherme Pietro
