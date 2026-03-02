@@ -100,10 +100,10 @@ Arquitetura modular com Blueprints
 
   • Migração para PostgreSQL
   
-📈 Objetivo
+# 📈 Objetivo
 
 Desenvolver uma aplicação escalável e profissional para controle de ativos de TI, utilizando boas práticas de organização, separação de responsabilidades e estrutura modular.
 
-👨‍💻 Autor
 
+👨‍💻 Autor
 Desenvolvido por Guilherme Pietro
