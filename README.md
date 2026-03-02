@@ -77,6 +77,7 @@ O sistema utiliza SQLite3 com as seguintes tabelas:
  • Registra todas as transferências, retiradas e devoluções para controle histórico.
 
  📊 Evolução do Projeto
+ 
 Planilha Excel
       ↓
 Automação via Terminal
@@ -116,19 +117,19 @@ Antes da versão web, o projeto começou como um sistema de automação em Pytho
 
 Esse módulo foi responsável por:
 
-Ler dados da planilha .xlsx
+• Ler dados da planilha .xlsx
 
-Validar inconsistências
+• Validar inconsistências
 
-Evitar duplicidade de tombamento
+• Evitar duplicidade de tombamento
 
-Gerar relatórios automáticos
+• Gerar relatórios automáticos
 
-Permitir cadastro via terminal
+• Permitir cadastro via terminal
 
-Permitir exclusão controlada
+• Permitir exclusão controlada
 
-Atualizar a planilha automaticamente
+• Atualizar a planilha automaticamente
 
 
 **📂 Arquivo**
@@ -146,6 +147,7 @@ automacao.py
 • Excel (.xlsx)
 
 **🔎 Funcionalidades Implementadas**
+
 📥 Leitura da Planilha
 
 ```python
@@ -216,17 +218,20 @@ Tudo gerado programaticamente.
 
 **➕ Cadastro via Terminal**
 
+```python
 def cadastrar_equipamento(df):
+
+```
 
 Permite:
 
-Inserir novo equipamento
+• Inserir novo equipamento
 
-Validar duplicidade
+• Validar duplicidade
 
-Salvar diretamente na planilha
+• Salvar diretamente na planilha
 
-Atualizar arquivo Excel automaticamente
+• Atualizar arquivo Excel automaticamente
 
 **🗑 Exclusão Controlada**
 
@@ -251,7 +256,7 @@ Fluxo:
 
 **🧠 Estrutura do Sistema (Modo Terminal)**
 
-
+```
 ===== SISTEMA DE CONTROLE DE EQUIPAMENTOS =====
 
 1 - Gerar Relatório
@@ -259,6 +264,8 @@ Fluxo:
 3 - Verificar Equipamentos Sem Tombamento
 4 - Excluir Equipamento
 0 - Sair
+
+```
 
 Interface totalmente via CLI (Command Line Interface).
 
