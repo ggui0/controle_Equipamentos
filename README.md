@@ -73,7 +73,7 @@ O sistema utiliza SQLite3 com as seguintes tabelas:
 
  • Registra todas as transferências, retiradas e devoluções para controle histórico.
 
-# 📊 Evolução do Projeto
+ 📊 Evolução do Projeto
 Planilha Excel
       ↓
 Automação via Terminal
@@ -86,7 +86,7 @@ Interface dinâmica com DataTables
       ↓
 Arquitetura modular com Blueprints
 
-# 🔐 Possiveis Próximas Implementações
+ 🔐 Possiveis Próximas Implementações
 
   • Sistema de login e autenticação
 
@@ -100,7 +100,7 @@ Arquitetura modular com Blueprints
 
   • Migração para PostgreSQL
   
-# 📈 Objetivo
+ 📈 Objetivo
 
 Desenvolver uma aplicação escalável e profissional para controle de ativos de TI, utilizando boas práticas de organização, separação de responsabilidades e estrutura modular.
 
