@@ -262,6 +262,7 @@ Essa etapa foi essencial porque:
 • Facilitou transição para sistema web
 
 **🔄 Evolução do Projeto**
+
 Planilha manual
       ↓
 Automação via Python (Terminal)
