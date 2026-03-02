@@ -37,29 +37,29 @@ Filtros avançados estilo Excel
 🛠 Tecnologias Utilizadas
 🔹 Backend
 
-Python 3.14
+• Python 3.14
 
-Flask
+• Flask
 
-SQLite3
+• SQLite3
 
-Pandas
+• Pandas
 
-OpenPyXL
+• OpenPyXL
 
 🔹 Frontend
 
-HTML5
+• HTML5
 
-CSS3
+• CSS3
 
-JavaScript
+• JavaScript
 
-jQuery
+• jQuery
 
-DataTables
+• DataTables
 
-DataTables Buttons
+• DataTables Buttons
 
 
 
@@ -100,7 +100,7 @@ Arquitetura modular com Blueprints
 
   • Migração para PostgreSQL
   
-# 📈 Objetivo
+📈 Objetivo
 
 Desenvolver uma aplicação escalável e profissional para controle de ativos de TI, utilizando boas práticas de organização, separação de responsabilidades e estrutura modular.
 
