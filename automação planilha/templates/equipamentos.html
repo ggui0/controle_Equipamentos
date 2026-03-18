@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equipamentos</title>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+
+    <!-- SEU CSS (pasta static) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h2>Lista Completa de Equipamentos</h2>
+
+<a href="/cadastrar" class="btn btn-green">+ Novo Equipamento</a>
+<a href="/historico" class="btn btn-green">📜 Histórico de Movimentações</a>
+
+<br><br>
+
+<table id="tabelaEquipamentos" class="display nowrap" style="width:100%">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tipo</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Número de Série</th>
+            <th>Service TAG</th>
+            <th>Tombamento</th>
+            <th>Especificações</th>
+            <th>Locado</th>
+            <th>Setor</th>
+            <th>Responsável</th>
+            <th>Observações</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for eq in equipamentos %}
+        <tr>
+            <td>{{ eq["id"] }}</td>
+            <td>{{ eq["tipo"] }}</td>
+            <td>{{ eq["marca"] }}</td>
+            <td>{{ eq["modelo"] }}</td>
+            <td>{{ eq["numero_serie"] }}</td>
+            <td>{{ eq["service_tag"] }}</td>
+            <td>{{ eq["tombamento"] }}</td>
+            <td>{{ eq["especificacoes"] }}</td>
+            <td>{{ eq["locado"] }}</td>
+            <td>{{ eq["setor"] }}</td>
+            <td>{{ eq["responsavel"] }}</td>
+            <td>{{ eq["observacoes"] }}</td>
+            <td>{{ eq["status"] }}</td>
+            <td>
+                <a class="btn btn-blue" href="/movimentar/{{ eq['id'] }}">Movimentar</a>
+                <a class="btn btn-yellow" href="/editar/{{ eq['id'] }}">Editar</a>
+                <a class="btn btn-red" href="/excluir/{{ eq['id'] }}" 
+                   onclick="return confirm('Tem certeza que deseja excluir este equipamento?')">
+                   Excluir
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+<!-- SCRIPTS -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+<!-- Export dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+<!-- SEU JS (pasta static) -->
+<script src="{{ url_for('static', filename='datatable-config.js') }}"></script>
+
+</body>
+</html>
