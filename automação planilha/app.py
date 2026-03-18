@@ -32,16 +32,17 @@ def criar_banco():
     """)
 
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS movimentacoes (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            equipamento_id INTEGER,
-            data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            tipo_movimentacao TEXT,
-            de_setor TEXT,
-            para_setor TEXT,
-            usuario TEXT
-        )
-    """)
+    CREATE TABLE IF NOT EXISTS movimentacoes (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        equipamento_id INTEGER,
+        data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        tipo_movimentacao TEXT,
+        de_setor TEXT,
+        para_setor TEXT,
+        novo_responsavel TEXT,
+        usuario TEXT
+    )
+""")
 
     conn.commit()
     conn.close()
@@ -159,10 +160,10 @@ def movimentar(id):
 
         
         cursor.execute("""
-            INSERT INTO movimentacoes
-            (equipamento_id, tipo_movimentacao, de_setor, para_setor, usuario)
-            VALUES (?, ?, ?, ?, ?)
-        """, (id, tipo_mov, de_setor, para_setor, usuario_sistema))
+    INSERT INTO movimentacoes
+    (equipamento_id, tipo_movimentacao, de_setor, para_setor, novo_responsavel, usuario)
+    VALUES (?, ?, ?, ?, ?, ?)
+""", (id, tipo_mov, de_setor, para_setor, novo_responsavel, usuario_sistema))
 
         conn.commit()
         conn.close()
@@ -171,6 +172,7 @@ def movimentar(id):
 
     conn.close()
     return render_template("movimentar.html", equipamento=equipamento)
+
 
 @app.route("/historico")
 def historico():
@@ -189,8 +191,11 @@ def historico():
     conn.close()
 
     return render_template("historico.html", registros=registros)
+    
 
 from flask import request, redirect, url_for
+
+
 
 @app.route("/cadastrar", methods=["GET", "POST"])
 def cadastrar():
@@ -245,6 +250,20 @@ def excluir(id):
     conn.close()
 
     return redirect(url_for("listar_equipamentos"))
+
+
+@app.route("/excluir_historico/<int:id>")
+def excluir_historico(id):
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM movimentacoes WHERE id = ?", (id,))
+
+    conn.commit()
+    conn.close()
+
+    return redirect(url_for("historico"))
 
 
 @app.route("/editar/<int:id>", methods=["GET", "POST"])
